@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Pizzaria53.Cliente.Cadastro"
+             Title="Bem-Vindo!">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <Grid HeightRequest="50" BackgroundColor="White">
+                    <StackLayout BackgroundColor="LightGray">
+                        <Label Text="Cadastro" FontSize="30" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" Margin="6" LineBreakMode="WordWrap"/>
+                    </StackLayout>
+                </Grid>
+                <Grid HeightRequest="100" BackgroundColor="White">
+                    <StackLayout>
+                        <Label Text="Bem-vindo! Para podermos iniciar nossa experiência juntos, precisamos de algumas informações suas:" 
+                               HorizontalOptions="Center" VerticalOptions="CenterAndExpand" LineBreakMode="WordWrap" 
+                               Margin="8" FontSize="14" TextColor="Black"/>
+                    </StackLayout>
+                </Grid>
+                <Grid>
+                    <StackLayout BackgroundColor="Tomato" Padding="25" Spacing="25">
+                        <Entry Placeholder="Nome:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="nome"/>
+                        <Entry Placeholder="E-mail:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="mail"/>
+                        <Entry Placeholder="Telefone:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="telefone"/>
+                        <Entry Placeholder="Endereço:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="endereco"/>
+                    </StackLayout>
+                </Grid>
+                <Grid BackgroundColor="White" HeightRequest="180">
+                    <Button Text="Cadastrar" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"
+                            FontSize="22" Clicked="goHomePage"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

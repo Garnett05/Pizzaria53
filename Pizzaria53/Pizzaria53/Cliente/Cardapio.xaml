@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Pizzaria53.Cliente.Cardapio"
+             Title="Cardápio">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <Grid HeightRequest="50" BackgroundColor="White">
+                    <StackLayout BackgroundColor="Firebrick">
+                        <Label Text="Pizzas individuais" FontSize="28" HorizontalOptions="Start" TextColor="Black" Margin="6"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Margin="2" Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.25*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="160"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Column="0" Grid.Row="0">
+                        <Label Text="Pizza de Mussarela" VerticalOptions="Start" FontSize="24" Margin="3" />
+                        <Label Text="Pizza Individual. Ingredientes: Molho de Tomate, muzzarela, manjericão e azeite" FontSize="12" VerticalOptions="Start" Margin="3"/>
+                        <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="0">
+                        <Image Source="mussarela.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="0" Grid.Row="1">
+                        <Label Text="Pizza de Toscana" VerticalOptions="Start" FontSize="24" Margin="3" />
+                        <Label Text="Pizza Individual. Ingredientes: Molho, muzzarela, linguiça caseira, pimentão verde, pimentão 
+                           biquinho amarela e grana padano" FontSize="12" VerticalOptions="Start" Margin="3"/>
+                        <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="1">
+                        <Image Source="toscana.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="0" Grid.Row="2">
+                        <Label Text="Pizza de 3 Queijos" VerticalOptions="Start" FontSize="24" Margin="3" />
+                        <Label Text="Pizza Individual. Ingredientes: Muzzarela, provolone e catupiry" FontSize="12" VerticalOptions="Start" Margin="3"/>
+                        <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="2">
+                        <Image Source="queijos.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
