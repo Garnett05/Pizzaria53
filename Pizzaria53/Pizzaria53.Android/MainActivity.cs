@@ -29,5 +29,6 @@ namespace Pizzaria53.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }

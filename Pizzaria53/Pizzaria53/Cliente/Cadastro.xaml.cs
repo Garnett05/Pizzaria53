@@ -15,10 +15,10 @@ namespace Pizzaria53.Cliente
         public Cadastro()
         {
             InitializeComponent();
-        }
+        }        
         private void goHomePage(object sender, EventArgs args)
-        {
-            App.Current.MainPage = new Cliente.Home();
+        {                      
+            App.Current.MainPage = new Cliente.Menu.Master();
         }
     }    
 }

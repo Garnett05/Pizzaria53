@@ -51,6 +51,9 @@
                         <Image Source="queijos.png" VerticalOptions="Center" HorizontalOptions="Center"/>
                     </StackLayout>
                 </Grid>
+                <Grid>
+                    <Button Text="Voltar" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Clicked="goMenuPage"/>
+                </Grid>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

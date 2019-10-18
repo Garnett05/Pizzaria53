@@ -6,10 +6,59 @@
              mc:Ignorable="d"
              x:Class="Pizzaria53.Cliente.Home">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="LightGray">
-            <Label Text="Bem vindo a Pizzaria 53!"
+        <StackLayout>
+            <StackLayout HeightRequest="60">
+                <Label Text="Pizzaria 53" FontSize="24" FontAttributes="Bold" TextColor="Black"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <StackLayout HeightRequest="2" BackgroundColor="red"/>
+            <StackLayout Margin="5" Spacing="10" BackgroundColor="White" HeightRequest="400">
+                <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="FillAndExpand">
+                    <Grid Margin="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Cardápio" VerticalOptions="Start" 
+                                   HorizontalOptions="Start" FontSize="14" TextColor="Black"/>
+                            <Label Text="Escolha o seu sabor e realize o seu pedido" TextColor="Black"
+                               VerticalOptions="Center" HorizontalOptions="Center" Margin="3"
+                               FontAttributes="Bold" FontSize="28"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="0">
+                            <Image Source="pizza1.png" VerticalOptions="EndAndExpand" HorizontalOptions="Fill"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="FillAndExpand">
+                    <Grid Margin="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Carrinho" VerticalOptions="Start" 
+                                   HorizontalOptions="Start" FontSize="14" TextColor="Black"/>
+                            <Label Text="Seu carrinho está vazio" TextColor="Black"
+                               VerticalOptions="Center" HorizontalOptions="Center" Margin="3"
+                               FontAttributes="Bold" FontSize="28"/>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="0">
+                            <Image Source="carrinho.jpg" VerticalOptions="EndAndExpand" HorizontalOptions="Fill"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+
+
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

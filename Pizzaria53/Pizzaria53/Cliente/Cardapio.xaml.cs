@@ -16,5 +16,9 @@ namespace Pizzaria53.Cliente
         {
             InitializeComponent();
         }
+        private void goMenuPage (object sender, EventArgs args)
+        {
+            App.Current.MainPage = new Cliente.Menu.Master();
+        }
     }
 }
