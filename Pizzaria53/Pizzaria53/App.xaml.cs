@@ -10,7 +10,7 @@ namespace Pizzaria53
         {
             InitializeComponent();
 
-            MainPage = new Cliente.Home();
+            MainPage = new Cliente.Login();
         }
 
         protected override void OnStart()
