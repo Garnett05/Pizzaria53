@@ -27,6 +27,7 @@
                         <Entry Placeholder="E-mail:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="mail"/>
                         <Entry Placeholder="Telefone:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="telefone"/>
                         <Entry Placeholder="Endereço:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="endereco"/>
+                        <Entry Placeholder="Senha:" PlaceholderColor="Silver" BackgroundColor="#FFFFFF" x:Name="senha"/>                        
                     </StackLayout>
                 </Grid>
                 <Grid BackgroundColor="White" HeightRequest="180">

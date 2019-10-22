@@ -21,7 +21,7 @@ namespace Pizzaria53.Cliente
         private void SignInProcedure(object sender, EventArgs args)
         {
             User user = new User(Entry_Username.Text, Entry_Password.Text);
-            if (!user.CheckInformation())
+            if (user.CheckInformation() != true)
             {
                 DisplayAlert("Login", "Login realizado com sucesso", "Ok");
             }

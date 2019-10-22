@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static Pizzaria53.App;
 
 namespace Pizzaria53.Cliente
 {
@@ -17,7 +18,10 @@ namespace Pizzaria53.Cliente
             InitializeComponent();
         }        
         private void goHomePage(object sender, EventArgs args)
-        {                      
+        {
+            Client cliente = new Client(nome.Text, senha.Text, mail.Text);
+            Globais.GlobalNome = cliente.Nome;
+            
             App.Current.MainPage = new Cliente.Menu.Master();
         }
     }    

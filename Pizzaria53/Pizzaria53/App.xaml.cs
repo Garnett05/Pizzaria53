@@ -10,7 +10,11 @@ namespace Pizzaria53
         {
             InitializeComponent();
 
-            MainPage = new Cliente.Login();
+            MainPage = new Cliente.Cadastro();
+        }
+        public static class Globais
+        {
+            public static string GlobalNome;            
         }
 
         protected override void OnStart()

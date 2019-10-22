@@ -10,8 +10,10 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu" Padding="0">
             <StackLayout Spacing="20">
-                <Label x:Name="user" Text="Olá UserName!" HeightRequest="20" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                <Label x:Name="user" HeightRequest="20" HorizontalOptions="Center" VerticalOptions="Fill"/>
                 <Button Text="Cardápio" Clicked="goCardapioPage"/>
+                <Button Text="Cadastre-se" Clicked="goCadastroPage"/>
+                <Button Text="Login" Clicked="goLoginPage"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
