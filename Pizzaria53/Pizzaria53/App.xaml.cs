@@ -14,7 +14,8 @@ namespace Pizzaria53
         }
         public static class Globais
         {
-            public static string GlobalNome;            
+            public static string GlobalNome;
+            public static string SenhaConfirmacao;
         }
 
         protected override void OnStart()

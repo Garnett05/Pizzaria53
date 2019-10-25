@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Pizzaria53.Cliente.Cadastro2">
+   <ContentPage.Content>
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <StackLayout BackgroundColor="LightGray">
+                    <Label Text="Cadastro" FontSize="30" HorizontalOptions="Center" TextColor="Black" 
+                               FontAttributes="Bold" Margin="6" LineBreakMode="WordWrap"/>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Agora precisamos das suas informações de endereço e telefone para quando você realizar o seu pedido" 
+                               HorizontalOptions="Center" VerticalOptions="CenterAndExpand" LineBreakMode="WordWrap"
+                               Margin="8" FontSize="14" TextColor="Black"/>
+                </StackLayout>                    
+                <StackLayout HeightRequest="3" BackgroundColor="red"/>
+                <StackLayout BackgroundColor="#F7F9F9" Padding="15" Spacing="10">
+                    <Label Text="Telefone" HorizontalOptions="Start" TextColor="Black"/>
+                    <Entry Placeholder="DDD" PlaceholderColor="#FF6347" Keyboard="Numeric" BackgroundColor="#FFFFFF" x:Name="ddd"/>
+                    <Entry Placeholder="Número" PlaceholderColor="#FF6347" Keyboard="Numeric" BackgroundColor="#FFFFFF" x:Name="numeroTel"/>
+                    <Label Text="Dados de Endereço" HorizontalOptions="Start" TextColor="Black"/>
+                    <Entry Placeholder="CEP" PlaceholderColor="#FF6347" Keyboard="Numeric" BackgroundColor="#FFFFFF" x:Name="cep"/>                    
+                    <Entry Placeholder="Endereço" PlaceholderColor="#FF6347" BackgroundColor="#FFFFFF" x:Name="endereco"/>
+                    <Entry Placeholder="Número" PlaceholderColor="#FF6347" Keyboard="Numeric" BackgroundColor="#FFFFFF" x:Name="numeroEnd"/>
+                    <Entry Placeholder="Complemento" PlaceholderColor="#FF6347" Keyboard="Numeric" BackgroundColor="#FFFFFF" x:Name="complemento"/>
+                    <Entry Placeholder="Bairro" PlaceholderColor="#FF6347" BackgroundColor="#FFFFFF" x:Name="bairro"/>                
+            </StackLayout>                                
+                    <Button Text="Finalizar Cadastro" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"
+                            FontSize="22" Clicked="goHomePage"/>                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -15,14 +15,20 @@ namespace Pizzaria53.Cliente
     {
         public Cadastro()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }        
-        private void goHomePage(object sender, EventArgs args)
+        private void goCardapio2(object sender, EventArgs args)
         {
-            Client cliente = new Client(nome.Text, senha.Text, mail.Text);
-            Globais.GlobalNome = cliente.Nome;
-            
-            App.Current.MainPage = new Cliente.Menu.Master();
+            CadUser cadastro = new CadUser(nome.Text, mail.Text, senha.Text, senhaConfirmacao.Text);
+            Globais.GlobalNome = cadastro.Nome;
+
+            if (cadastro.Senha == cadastro.SenhaConfirmacao)
+            {
+                App.Current.MainPage = new Cliente.Cadastro2();
+            }
+            else { 
+                DisplayAlert("Senha", "Atenção: As senhas informadas não estão iguais!", "Ok");
+            }
         }
     }    
 }
