@@ -8,7 +8,7 @@
              Title="Menu"
              x:Class="Pizzaria53.Cliente.Menu.Master">
     <MasterDetailPage.Master>
-        <ContentPage Title="Menu" Padding="0">
+        <ContentPage Title="Menu">
             <StackLayout Spacing="20">
                 <Label x:Name="user" HeightRequest="20" HorizontalOptions="Center" VerticalOptions="Fill"/>
                 <Button Text="Cardápio" Clicked="goCardapioPage"/>

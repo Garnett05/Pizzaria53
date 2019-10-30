@@ -10,15 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace Pizzaria53.Cliente
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Home : ContentPage
+    public partial class CardapioOpcoes : ContentPage
     {
-        public Home()
+        public CardapioOpcoes()
         {
             InitializeComponent();
-        }
-        private void goCardapioPage (object sender, EventArgs args)
-        {
-            Navigation.PushAsync(new Cliente.Cardapio());
+            
         }
     }
 }

@@ -16,7 +16,7 @@
             <StackLayout  VerticalOptions="CenterAndExpand" Spacing="20" Margin="10">
                 <Entry FontSize="28" x:Name="Entry_Username" Placeholder="Username" />
                 <Entry FontSize="28" x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
-                <Button BackgroundColor="#5499C7" Text="Login" TextColor="Yellow" Clicked="SignInProcedure"/>
+                <Button BackgroundColor="#5499C7" Text="Login" TextColor="Yellow"/>
                 <Label Text="Esqueceu sua senha?" HorizontalTextAlignment="Center" FontSize="12"/>
                 <Label Text="Não possui uma conta? Cadastre-se" HorizontalTextAlignment="Center" FontSize="12"/>
             </StackLayout>            

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,13 +10,13 @@ namespace Pizzaria53
         {
             InitializeComponent();
 
-            MainPage = new Cliente.Cadastro();
+            MainPage = new NavigationPage(new Cliente.Home());
         }
         public static class Globais
         {
             public static string GlobalNome;
             public static string SenhaConfirmacao;
-        }
+        }        
 
         protected override void OnStart()
         {

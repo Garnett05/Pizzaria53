@@ -7,8 +7,9 @@
              x:Class="Pizzaria53.Cliente.Cardapio"
              Title="Cardápio">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView>            
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <Label x:Name="Label"/>
                 <Grid HeightRequest="50" BackgroundColor="White">
                     <StackLayout BackgroundColor="Firebrick">
                         <Label Text="Pizzas individuais" FontSize="28" HorizontalOptions="Start" TextColor="Black" Margin="6"/>
@@ -31,11 +32,23 @@
                         <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="0">
-                        <Image Source="mussarela.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        <Picker Title="Quantidade" TextColor="Red" x:Name="PickerQntdMussarela" 
+                                SelectedIndexChanged="ActionMudarIndex">
+                            <Picker.Items>
+                                <x:String>0</x:String>
+                                <x:String>1</x:String>
+                                <x:String>2</x:String>
+                                <x:String>3</x:String>
+                                <x:String>4</x:String>
+                                <x:String>5</x:String>                                
+                            </Picker.Items>
+                            </Picker>
+                        <Button Text="Adicionar ao carrinho" Clicked="addMussarela"/>
+                        <!--<Image Source="mussarela.png" VerticalOptions="Center" HorizontalOptions="Center"/>-->
                     </StackLayout>
                     <StackLayout Grid.Column="0" Grid.Row="1">
                         <Label Text="Pizza de Toscana" VerticalOptions="Start" FontSize="24" Margin="3" />
-                        <Label Text="Pizza Individual. Ingredientes: Molho, muzzarela, linguiça caseira, pimentão verde, pimentão 
+                        <Label Text="Pizza Individual. Ingredientes: Molho, mussarela, linguiça caseira, pimentão verde, pimentão 
                            biquinho amarela e grana padano" FontSize="12" VerticalOptions="Start" Margin="3"/>
                         <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
                     </StackLayout>
@@ -44,7 +57,7 @@
                     </StackLayout>
                     <StackLayout Grid.Column="0" Grid.Row="2">
                         <Label Text="Pizza de 3 Queijos" VerticalOptions="Start" FontSize="24" Margin="3" />
-                        <Label Text="Pizza Individual. Ingredientes: Muzzarela, provolone e catupiry" FontSize="12" VerticalOptions="Start" Margin="3"/>
+                        <Label Text="Pizza Individual. Ingredientes: Mussarela, provolone e catupiry" FontSize="12" VerticalOptions="Start" Margin="3"/>
                         <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="2">

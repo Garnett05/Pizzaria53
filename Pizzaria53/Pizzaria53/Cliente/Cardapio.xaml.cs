@@ -12,13 +12,35 @@ namespace Pizzaria53.Cliente
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Cardapio : ContentPage
     {
+        int qntd = 0;
         public Cardapio()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
-        private void goMenuPage (object sender, EventArgs args)
+        private void ActionMudarIndex(object sender, EventArgs args)
         {
-            App.Current.MainPage = new Cliente.Menu.Master();
+            Picker obj = (Picker)sender;
+            qntd = obj.SelectedIndex;
+        }
+        public async void addMussarela (object sender, EventArgs e)
+        {
+            var resultado = await DisplayAlert("Confirmação", "Deseja inserir o pedido no seu carrinho?", "Não", "Sim");
+            if (resultado == false)
+            {
+                await DisplayAlert("Confirmação", "Item adicionado ao carrinho!", "Ok");
+                CarrinhoPizza carrinhoMussarela = new CarrinhoPizza("Mussarela", 'M', qntd);
+                var CardapioOpcoes = new CardapioOpcoes();
+                CardapioOpcoes.BindingContext = carrinhoMussarela;
+                await Navigation.PushAsync(CardapioOpcoes);
+            }
+            else
+            {
+               await DisplayAlert("Confirmação", "O item não foi inserido no carrinho", "Ok");
+            }
+        }
+        private void goMenuPage(object sender, EventArgs args)
+        {            
+            
         }
     }
 }
