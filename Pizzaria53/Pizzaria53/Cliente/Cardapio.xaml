@@ -8,8 +8,7 @@
              Title="Cardápio">
     <ContentPage.Content>
         <ScrollView>            
-            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
-                <Label x:Name="Label"/>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">                
                 <Grid HeightRequest="50" BackgroundColor="White">
                     <StackLayout BackgroundColor="Firebrick">
                         <Label Text="Pizzas individuais" FontSize="28" HorizontalOptions="Start" TextColor="Black" Margin="6"/>
@@ -21,49 +20,152 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="160"/>
-                        <RowDefinition Height="160"/>
-                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="100"/>                        
                     </Grid.RowDefinitions>
-
                     <StackLayout Grid.Column="0" Grid.Row="0">
                         <Label Text="Pizza de Mussarela" VerticalOptions="Start" FontSize="24" Margin="3" />
                         <Label Text="Pizza Individual. Ingredientes: Molho de Tomate, muzzarela, manjericão e azeite" FontSize="12" VerticalOptions="Start" Margin="3"/>
                         <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="0">
-                        <Picker Title="Quantidade" TextColor="Red" x:Name="PickerQntdMussarela" 
-                                SelectedIndexChanged="ActionMudarIndex">
-                            <Picker.Items>
-                                <x:String>0</x:String>
-                                <x:String>1</x:String>
-                                <x:String>2</x:String>
-                                <x:String>3</x:String>
-                                <x:String>4</x:String>
-                                <x:String>5</x:String>                                
-                            </Picker.Items>
-                            </Picker>
-                        <Button Text="Adicionar ao carrinho" Clicked="addMussarela"/>
-                        <!--<Image Source="mussarela.png" VerticalOptions="Center" HorizontalOptions="Center"/>-->
-                    </StackLayout>
-                    <StackLayout Grid.Column="0" Grid.Row="1">
-                        <Label Text="Pizza de Toscana" VerticalOptions="Start" FontSize="24" Margin="3" />
-                        <Label Text="Pizza Individual. Ingredientes: Molho, mussarela, linguiça caseira, pimentão verde, pimentão 
-                           biquinho amarela e grana padano" FontSize="12" VerticalOptions="Start" Margin="3"/>
-                        <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
-                    </StackLayout>
-                    <StackLayout Grid.Column="1" Grid.Row="1">
-                        <Image Source="toscana.png" VerticalOptions="Center" HorizontalOptions="Center"/>
-                    </StackLayout>
-                    <StackLayout Grid.Column="0" Grid.Row="2">
-                        <Label Text="Pizza de 3 Queijos" VerticalOptions="Start" FontSize="24" Margin="3" />
-                        <Label Text="Pizza Individual. Ingredientes: Mussarela, provolone e catupiry" FontSize="12" VerticalOptions="Start" Margin="3"/>
-                        <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
-                    </StackLayout>
-                    <StackLayout Grid.Column="1" Grid.Row="2">
-                        <Image Source="queijos.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                        
+                        <Image Source="mussarela.png" VerticalOptions="Center" HorizontalOptions="Center"/>
                     </StackLayout>
                 </Grid>
+                <Grid Margin="3" ColumnSpacing="2" RowSpacing="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.12*"/>
+                        <ColumnDefinition Width="1.12*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Picker Grid.Column="0" Title="Quantidade" TextColor="Red" x:Name="PickerQntdMussarela" 
+                                SelectedIndexChanged="ActionMudarIndex" FontSize="14" Margin="5">
+                        <Picker.Items>
+                            <x:String>0</x:String>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Picker Grid.Column="1" Title="Tamanho" TextColor="Red" x:Name="PickerTamanhoMussarela" 
+                                SelectedIndexChanged="ActionMudarIndex" FontSize="14" Margin="5">
+                        <Picker.Items>
+                            <x:String>P</x:String>
+                            <x:String>M</x:String>
+                            <x:String>G</x:String>                            
+                        </Picker.Items>
+                    </Picker>
+                    <Button Grid.Column="2" Text="Adicionar ao carrinho" Clicked="addMussarela" FontSize="12" Margin="5"/>
+                </Grid>
+                
+                <!-- aloba-->
+
+                <Grid Margin="2" Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.25*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Column="0" Grid.Row="0">
+                        <Label Text="Pizza de Toscana" VerticalOptions="Start" FontSize="24" Margin="3" />
+                        <Label Text="Pizza Individual. Ingredientes: Molho, mussarela, linguiça caseira, pimentão verde, 
+                               pimentão biquinho amarela e grana padano" FontSize="12" VerticalOptions="Start" Margin="3"/>
+                        <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="0">
+
+                        <Image Source="toscana.png" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Margin="3" ColumnSpacing="2" RowSpacing="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.12*"/>
+                        <ColumnDefinition Width="1.12*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Picker Grid.Column="0" Title="Quantidade" TextColor="Red" x:Name="PickerQntdToscana" 
+                                SelectedIndexChanged="ActionMudarIndex" FontSize="14" Margin="5">
+                        <Picker.Items>
+                            <x:String>0</x:String>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Picker Grid.Column="1" Title="Tamanho" TextColor="Red" x:Name="PickerTamanhoToscana" 
+                                SelectedIndexChanged="ActionMudarIndex" FontSize="14" Margin="5">
+                        <Picker.Items>
+                            <x:String>P</x:String>
+                            <x:String>M</x:String>
+                            <x:String>G</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Button Grid.Column="2" Text="Adicionar ao carrinho" Clicked="addToscana" FontSize="12" Margin="5"/>
+                </Grid>
+                
+                <!--aloba-->
+
+                <Grid Margin="2" Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.25*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Column="0" Grid.Row="0">
+                        <Label Text="Pizza de 3 Queijos" VerticalOptions="Start" FontSize="24" Margin="3" />
+                        <Label Text="Pizza Individual. Ingredientes: Mussarela, provolone e catupiry" 
+                               FontSize="12" VerticalOptions="Start" Margin="3"/>
+                        <Label Text="R$ 22,00" FontSize="12" HorizontalOptions="End"/>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="0">
+
+                        <Image Source="toscana.png" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Margin="3" ColumnSpacing="2" RowSpacing="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.12*"/>
+                        <ColumnDefinition Width="1.12*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Picker Grid.Column="0" Title="Quantidade" TextColor="Red" x:Name="PickerQntd3queijos" 
+                                SelectedIndexChanged="ActionMudarIndex" FontSize="14" Margin="5">
+                        <Picker.Items>
+                            <x:String>0</x:String>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Picker Grid.Column="1" Title="Tamanho" TextColor="Red" x:Name="PickerTamanho3queijos" 
+                                SelectedIndexChanged="ActionMudarIndex" FontSize="14" Margin="5">
+                        <Picker.Items>
+                            <x:String>P</x:String>
+                            <x:String>M</x:String>
+                            <x:String>G</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Button Grid.Column="2" Text="Adicionar ao carrinho" Clicked="add3queijos" FontSize="12" Margin="5"/>
+                </Grid>              
                 <Grid>
                     <Button Text="Voltar" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Clicked="goMenuPage"/>
                 </Grid>

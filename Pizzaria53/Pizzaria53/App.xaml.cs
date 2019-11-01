@@ -10,7 +10,7 @@ namespace Pizzaria53
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Cliente.Home());
+            MainPage = new NavigationPage(new Cliente.Menu.Master());
         }
         public static class Globais
         {

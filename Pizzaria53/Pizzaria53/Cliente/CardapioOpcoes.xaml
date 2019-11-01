@@ -8,6 +8,9 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{Binding SaborPizza}"/>
+            <Label Text="{Binding TamanhoPizza}"/>
+            <Label Text="{Binding QuantidadePizza}"/>
+            <Label Text="{Binding ValorPedido}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
