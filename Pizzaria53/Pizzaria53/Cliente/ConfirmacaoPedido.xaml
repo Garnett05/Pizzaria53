@@ -9,42 +9,23 @@
         <StackLayout>
             <Label Text="Confirme abaixo o seu pedido" FontSize="24" FontAttributes="Bold" TextColor="Black"
                 VerticalOptions="Center" HeightRequest="50" 
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" />           
             <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="Fill" HorizontalOptions="Fill" Margin="5">
-            <Grid Margin="4">
+            <Grid Margin="4" x:Name="Grid1">
                 <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2.25*"/>
                         <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>                
-                    <Label Grid.Column="0" VerticalOptions="StartAndExpand">
-                        <Label.FormattedText>
-                            <FormattedString>                                                                
-                                <Span Text="{Binding SaborPizza}"/>
-                                <Span Text=" - "/>
-                                <Span Text="{Binding QuantidadePizza}" />
-                                <Span Text=" unidades"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label Grid.Column="0" VerticalOptions="Center">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Tamanho: "/>
-                                <Span Text="{Binding TamanhoPizza}"/>                                                                                                
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Label Grid.Column="0" VerticalOptions="End">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding ValorPedido, StringFormat='Valor: R$ {0:F2}'}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" VerticalOptions="StartAndExpand" x:Name="PizzaMussarela"/>
+
+                    <Label Grid.Column="0" VerticalOptions="Center" x:Name="TamanhoMussarela"/>
+
+                    <Label Grid.Column="0" VerticalOptions="End" x:Name="ValorMussarela"/>
+
                     <ImageButton Source="mussarela.png" HorizontalOptions="EndAndExpand" Grid.Column="1" HeightRequest="50"
                                  BackgroundColor="Transparent"/>
-            </Grid>
-            </Frame>
+            </Grid>                
+            </Frame>            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

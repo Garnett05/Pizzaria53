@@ -50,11 +50,11 @@
                                    HorizontalOptions="Start" FontSize="14" TextColor="Black"/>
                         <Button Text="Verifique os itens do seu carrinho" TextColor="Black" 
                                     VerticalOptions="Center" HorizontalOptions="Start" Margin="3" FontAttributes="Bold"
-                                    FontSize="20" Clicked="goCardapioPage" BackgroundColor="Transparent"/>
+                                    FontSize="20" Clicked="goMeuPedidoPage" BackgroundColor="Transparent"/>
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="0">
                         <ImageButton Source="carrinho.jpg" VerticalOptions="EndAndExpand" 
-                                         HorizontalOptions="Fill" Clicked="goCardapioPage" BackgroundColor="Transparent"/>
+                                         HorizontalOptions="Fill" Clicked="goMeuPedidoPage" BackgroundColor="Transparent"/>
                     </StackLayout>
                 </Grid>
             </Frame>

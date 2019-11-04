@@ -1,6 +1,7 @@
 ﻿ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections;
 
 namespace Pizzaria53
 {
@@ -10,13 +11,22 @@ namespace Pizzaria53
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Cliente.Menu.Master());
+            MainPage = new NavigationPage(new Cliente.MeuPedido());
         }
         public static class Globais
         {
             public static string GlobalNome;
             public static string SenhaConfirmacao;
-        }        
+            public static ArrayList MeuPedido = new ArrayList();
+        }
+        public static class varPizzaMussarela
+        {
+            public static string SaborPizza = "Pizza de Mussarela";
+            public static string TamanhoPizza;
+            public static int QuantidadePizza;
+            public static float ValorPizza = 22;
+            public static float ValorPizzaTotal;
+        }
 
         protected override void OnStart()
         {

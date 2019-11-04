@@ -18,11 +18,7 @@ namespace Pizzaria53.Cliente
         }
         public void goHomePage (object sender, EventArgs args)
         {
-            CadUser2 cadastro2 = new CadUser2(ddd.Text, numeroTel.Text, cep.Text, endereco.Text, numeroEnd.Text, complemento.Text, bairro.Text);
-            if (cadastro2.Ddd != null && cadastro2.NumeroTel == null)
-            {
-                DisplayAlert("Número", "O número do telefone foi preenchido, mas não o ddd. Por favor preencher ambos os campos", "Ok");
-            }            
+            App.Current.MainPage = new NavigationPage(new Cliente.Menu.Master());
         }        
     }
 }

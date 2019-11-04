@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static Pizzaria53.App;
 
 namespace Pizzaria53.Cliente
 {
@@ -15,6 +16,9 @@ namespace Pizzaria53.Cliente
         public ConfirmacaoPedido()
         {
             InitializeComponent();
+            PizzaMussarela.Text = varPizzaMussarela.SaborPizza;
+            TamanhoMussarela.Text = "Tamanho: "+ varPizzaMussarela.TamanhoPizza;
+            ValorMussarela.Text = Convert.ToString (varPizzaMussarela.ValorPizzaTotal);
 
         }        
     }

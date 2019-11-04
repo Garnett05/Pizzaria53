@@ -167,7 +167,7 @@
                     <Button Grid.Column="2" Text="Adicionar ao carrinho" Clicked="add3queijos" FontSize="12" Margin="5"/>
                 </Grid>              
                 <Grid>
-                    <Button Text="Voltar" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Clicked="goMenuPage"/>
+                    <Button Text="Finalizar pedido" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Clicked="goMenuPage"/>
                 </Grid>
             </StackLayout>
         </ScrollView>
