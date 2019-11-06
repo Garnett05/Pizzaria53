@@ -4,13 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:local="clr-namespace:Pizzaria53"             
              x:Class="Pizzaria53.MainPage">
 
-    <StackLayout>
+    <ContentPage.Content>    
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+        <local:CustomMap x:Name="customMap" MapType="Street" WidthRequest="{x:Static local:App.ScreenWidth}" 
+                         HeightRequest="{x:Static local:App.ScreenHeight}" />
+    </ContentPage.Content>
 </ContentPage>

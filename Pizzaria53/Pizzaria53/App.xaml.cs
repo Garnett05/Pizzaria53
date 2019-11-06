@@ -7,6 +7,8 @@ namespace Pizzaria53
 {
     public partial class App : Application
     {
+        public static double ScreenHeight;
+        public static double ScreenWidth;
         public App()
         {
             InitializeComponent();
