@@ -44,18 +44,34 @@ namespace Pizzaria53.Cliente
             {
                 var QntdSelecionada = PickerQntdMussarela.Items[PickerQntdMussarela.SelectedIndex];
                 varPizzaMussarela.QuantidadePizza = Convert.ToInt32(QntdSelecionada);
-                varPizzaMussarela.TamanhoPizza = PickerTamanhoMussarela.Items[PickerTamanhoMussarela.SelectedIndex];                                                        
+                varPizzaMussarela.TamanhoPizza = PickerTamanhoMussarela.Items[PickerTamanhoMussarela.SelectedIndex];                
                 varPizzaMussarela.ValorPizzaTotal = ValorPedido(varPizzaMussarela.QuantidadePizza, varPizzaMussarela.ValorPizza, varPizzaMussarela.TamanhoPizza);
-                await DisplayAlert("Confirmação", "Item adicionado ao carrinho!", "Ok");                
+                await DisplayAlert("Confirmação", "Item adicionado ao carrinho!", "Ok");
             }
         }
-        public void addToscana(object sender, EventArgs e)
+        public async void addToscana(object sender, EventArgs e)
         {
-
+            var resultado = await DisplayAlert("Confirmação", "Deseja inserir o pedido no seu carrinho?", "Não", "Sim");
+            if (resultado == false)
+            {
+                var QntdSelecionada = PickerQntdToscana.Items[PickerQntdToscana.SelectedIndex];
+                varPizzaToscana.QuantidadePizza = Convert.ToInt32(QntdSelecionada);
+                varPizzaToscana.TamanhoPizza = PickerTamanhoToscana.Items[PickerTamanhoToscana.SelectedIndex];
+                varPizzaToscana.ValorPizzaTotal = ValorPedido(varPizzaToscana.QuantidadePizza, varPizzaToscana.ValorPizza, varPizzaToscana.TamanhoPizza);
+                await DisplayAlert("Confirmação", "Item adicionado ao carrinho!", "Ok");
+            }
         }
-        public void add3queijos(object sender, EventArgs e)
+        public async void add3queijos(object sender, EventArgs e)
         {
-
+            var resultado = await DisplayAlert("Confirmação", "Deseja inserir o pedido no seu carrinho?", "Não", "Sim");
+            if (resultado == false)
+            {
+                var QntdSelecionada = PickerQntd3queijos.Items[PickerQntd3queijos.SelectedIndex];
+                varPizza3queijos.QuantidadePizza = Convert.ToInt32(QntdSelecionada);
+                varPizza3queijos.TamanhoPizza = PickerTamanho3queijos.Items[PickerTamanho3queijos.SelectedIndex];
+                varPizza3queijos.ValorPizzaTotal = ValorPedido(varPizza3queijos.QuantidadePizza, varPizza3queijos.ValorPizza, varPizza3queijos.TamanhoPizza);
+                await DisplayAlert("Confirmação", "Item adicionado ao carrinho!", "Ok");
+            }
         }
         private void goMenuPage(object sender, EventArgs args)
         {

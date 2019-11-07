@@ -21,11 +21,7 @@ namespace Pizzaria53.Cliente.Menu
             }
             else
             user.Text = "Olá " + Globais.GlobalNome + "!";
-        }
-        private void goCardapioPage (object sender, EventArgs args)
-        {
-            Detail = new Cliente.Cardapio();
-        }
+        }        
         private void goCadastroPage (object sender, EventArgs args)
         {
             Detail = new Cliente.Cadastro();
@@ -33,6 +29,10 @@ namespace Pizzaria53.Cliente.Menu
         private void goLoginPage (object sender, EventArgs args)
         {
             Detail = new Cliente.Login();
+        }
+        private void goContatoPage (object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new MainPage());
         }
     }
 }

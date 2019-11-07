@@ -9,23 +9,68 @@
         <StackLayout>
             <Label Text="Confirme abaixo o seu pedido" FontSize="24" FontAttributes="Bold" TextColor="Black"
                 VerticalOptions="Center" HeightRequest="50" 
-                HorizontalOptions="Center" />           
-            <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="Fill" HorizontalOptions="Fill" Margin="5">
-            <Grid Margin="4" x:Name="Grid1">
+                HorizontalOptions="Center" />
+            <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill" x:Name="Stack1">
+                <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="Fill" 
+                   HorizontalOptions="Fill" Margin="5" BorderColor="#FF7F50">
+            <Grid Margin="4">
                 <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2.25*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalOptions="StartAndExpand" x:Name="PizzaMussarela"/>
-
                     <Label Grid.Column="0" VerticalOptions="Center" x:Name="TamanhoMussarela"/>
-
                     <Label Grid.Column="0" VerticalOptions="End" x:Name="ValorMussarela"/>
-
                     <ImageButton Source="mussarela.png" HorizontalOptions="EndAndExpand" Grid.Column="1" HeightRequest="50"
                                  BackgroundColor="Transparent"/>
             </Grid>                
-            </Frame>            
+            </Frame>
+            </StackLayout>
+            <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill" x:Name="Stack2">
+            <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="Fill" 
+                   HorizontalOptions="Fill" Margin="5" BorderColor="#FF7F50">
+                <Grid Margin="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.25*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" VerticalOptions="StartAndExpand" x:Name="PizzaToscana"/>
+                    <Label Grid.Column="0" VerticalOptions="Center" x:Name="TamanhoToscana"/>
+                    <Label Grid.Column="0" VerticalOptions="End" x:Name="ValorToscana"/>
+                    <ImageButton Source="toscana.png" HorizontalOptions="EndAndExpand" Grid.Column="1" HeightRequest="50"
+                                 BackgroundColor="Transparent"/>
+                </Grid>
+            </Frame>
+            </StackLayout>
+            <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill" x:Name="Stack3">
+                <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="Fill" 
+                       HorizontalOptions="Fill" Margin="5" BorderColor="#FF7F50">
+                    <Grid Margin="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2.25*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalOptions="StartAndExpand" x:Name="Pizza3queijos"/>
+                        <Label Grid.Column="0" VerticalOptions="Center" x:Name="Tamanho3queijos"/>
+                        <Label Grid.Column="0" VerticalOptions="End" x:Name="Valor3queijos"/>
+                        <ImageButton Source="queijos.png" HorizontalOptions="EndAndExpand" Grid.Column="1" HeightRequest="50"
+                                 BackgroundColor="Transparent"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+            <Grid Margin="1" Padding="0" VerticalOptions="EndAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.7*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>                
+                <Frame BackgroundColor="#F7F9F9" CornerRadius="10" VerticalOptions="FillAndExpand" 
+                       HorizontalOptions="Fill" Margin="2" BorderColor="#FF7F50" Grid.Column="1" Grid.Row="0">                   
+                    <Label x:Name="TotalValue" TextColor="Black" FontSize="18" FontAttributes="Bold"/>
+                </Frame>
+                <Button Text="realizar pedido" Grid.Column="1" Grid.Row="1" 
+                        VerticalOptions="EndAndExpand" Margin="1" Clicked="enviarPedido"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

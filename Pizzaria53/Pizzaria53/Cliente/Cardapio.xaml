@@ -10,10 +10,12 @@
         <ScrollView>            
             <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">                
                 <Grid HeightRequest="50" BackgroundColor="White">
-                    <StackLayout BackgroundColor="Firebrick">
-                        <Label Text="Pizzas individuais" FontSize="28" HorizontalOptions="Start" TextColor="Black" Margin="6"/>
+                    <StackLayout>
+                        <Label Text="Pizzas individuais" FontSize="28" HorizontalOptions="Start" TextColor="Black" Margin="6"
+                               FontAttributes="Bold"/>
                     </StackLayout>
                 </Grid>
+                <StackLayout HeightRequest="1" BackgroundColor="Red"/>
                 <Grid Margin="2" Padding="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2.25*"/>
@@ -133,7 +135,7 @@
                     </StackLayout>
                     <StackLayout Grid.Column="1" Grid.Row="0">
 
-                        <Image Source="toscana.png" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+                        <Image Source="queijos.png" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
                 </Grid>
                 <Grid Margin="3" ColumnSpacing="2" RowSpacing="2">

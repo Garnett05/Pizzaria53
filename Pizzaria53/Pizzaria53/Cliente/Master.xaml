@@ -9,11 +9,11 @@
              x:Class="Pizzaria53.Cliente.Menu.Master">
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
-            <StackLayout Spacing="20">
-                <Label x:Name="user" HeightRequest="20" HorizontalOptions="Center" VerticalOptions="Fill"/>
-                <Button Text="Cardápio" Clicked="goCardapioPage"/>
+            <StackLayout Spacing="15">
+                <Label x:Name="user" HeightRequest="20" HorizontalOptions="Center" VerticalOptions="Fill"/>                
                 <Button Text="Cadastre-se" Clicked="goCadastroPage"/>
                 <Button Text="Login" Clicked="goLoginPage"/>
+                <Button Text="Contato" Clicked="goContatoPage"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
