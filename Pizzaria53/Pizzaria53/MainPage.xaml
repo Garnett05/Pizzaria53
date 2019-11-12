@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              xmlns:local="clr-namespace:Pizzaria53"             
              x:Class="Pizzaria53.MainPage"
-             Title="Contato">
+             Title="Informações">
     <ContentPage.Content>
         
         <!-- Place new controls here -->

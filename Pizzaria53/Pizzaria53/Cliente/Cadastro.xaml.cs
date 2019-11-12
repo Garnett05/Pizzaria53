@@ -15,18 +15,35 @@ namespace Pizzaria53.Cliente
     {
         public Cadastro()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }        
         private void goCardapio2(object sender, EventArgs args)
         {
             CadUser cadastro = new CadUser(nome.Text, mail.Text, senha.Text, senhaConfirmacao.Text);
-            Globais.GlobalNome = cadastro.Nome;
+            Globais.GlobalNome = cadastro.Nome;                        
 
+            if (cadastro.Senha.Length == 0)
+            {
+                DisplayAlert("Atenção", "O campo senha é obrigatório. Você deve preenche-lo para prosseguir", "Ok");
+            }
+            else
+            {
+                string lixo = "lixo";
+            }
+            if (cadastro.SenhaConfirmacao.Length == 0)
+            {
+                DisplayAlert("Atenção", "O campo senha é obrigatório. Você deve preenche-lo para prosseguir", "Ok");
+            }
+            else
+            {
+                string lixo = "lixo";
+            }
             if (cadastro.Senha == cadastro.SenhaConfirmacao)
             {
                 App.Current.MainPage = new Cliente.Cadastro2();
             }
-            else { 
+            else
+            {
                 DisplayAlert("Senha", "Atenção: As senhas informadas não estão iguais!", "Ok");
             }
         }
