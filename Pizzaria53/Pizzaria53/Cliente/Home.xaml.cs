@@ -24,14 +24,6 @@ namespace Pizzaria53.Cliente
         private void goMeuPedidoPage (object sender, EventArgs args)
         {
             if (varPizzaMussarela.QuantidadePizza != 0) {
-                
-            }
-            else if(varPizzaToscana.QuantidadePizza != 0)
-            {
-                Navigation.PushAsync(new Cliente.MeuPedido());
-            }
-            else if(varPizza3queijos.QuantidadePizza != 0)
-            {
                 Navigation.PushAsync(new Cliente.MeuPedido());
             }
             else
